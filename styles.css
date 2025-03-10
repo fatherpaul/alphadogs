@@ -5,7 +5,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     margin: 0;
     height: 100vh;
-    background-color: #2e1b5b; /* Plain deep blue background */
+    background-color: #791cc0; /* Updated to purple background */
     font-family: Montserrat, sans-serif;
     display: flex;
     flex-direction: column;
@@ -44,8 +44,8 @@ html {
 }
 
 .header-grid-main {
-    --height: 96px;
-    background-color: #2e1b5b;
+    --height: 50px; /* Reduced height to accommodate new layout */
+    background-color: #791cc0; /* Updated to purple background */
 }
 
 .header-grid-row {
@@ -72,7 +72,7 @@ html {
 
 .header-logo {
     --width: 220px;
-    --height: 96px;
+    --height: 50px; /* Reduced height to match header */
     background-image: linear-gradient(rgba(46, 27, 91, 0.77), rgba(46, 27, 91, 0.77));
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -83,7 +83,13 @@ html {
 
 .header-logo-image {
     --width: 180px;
-    --height: 96px;
+    --height: 50px; /* Reduced height to match logo */
+}
+
+.header-logo-image img {
+    width: 180px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .logo-placeholder {
@@ -131,17 +137,15 @@ main {
     text-align: center;
 }
 
-.leaderboard th {
-    background: #d3d3d3;
-    font-weight: bold;
+.leaderboard th:nth-child(odd),
+.leaderboard td:nth-child(odd) {
+    width: 33.33%; /* Equal width for all Name columns */
+    text-decoration: underline; /* Underline words in Name columns */
 }
 
-.leaderboard th:first-child, .leaderboard td:first-child {
-    width: 35%;
-}
-
-.leaderboard th.points, .leaderboard td.points {
-    width: 15%;
+.leaderboard th:nth-child(even),
+.leaderboard td:nth-child(even) {
+    width: 16.67%; /* Equal width for all Points columns */
 }
 
 /* Medal colors for first three rows in the first column */
