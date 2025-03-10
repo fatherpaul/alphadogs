@@ -129,6 +129,7 @@ main {
     font-size: 14px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.56);
     margin: 1rem 0;
+    table-layout: fixed; /* Force table to respect column widths */
 }
 
 .leaderboard th, .leaderboard td {
@@ -136,19 +137,24 @@ main {
     padding: 0.75rem;
     text-align: center;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
+    overflow: hidden; /* Prevent content from stretching columns */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .leaderboard th:nth-child(odd),
 .leaderboard td:nth-child(odd) {
-    width: 33.33%; /* Equal width for all Name columns */
+    width: 20%; /* Equal width for all Name columns */
     text-decoration: underline; /* Underline words in Name columns */
-    min-width: 200px; /* Ensure consistent minimum width */
+    min-width: 150px; /* Adjusted minimum width for better fit */
+    max-width: 20%; /* Prevent stretching beyond width */
 }
 
 .leaderboard th:nth-child(even),
 .leaderboard td:nth-child(even) {
-    width: 16.67%; /* Equal width for all Points columns */
-    min-width: 100px; /* Ensure consistent minimum width */
+    width: 13.33%; /* Equal width for all Points columns */
+    min-width: 80px; /* Adjusted minimum width for better fit */
+    max-width: 13.33%; /* Prevent stretching beyond width */
 }
 
 /* Medal colors for first three rows in the first column */
