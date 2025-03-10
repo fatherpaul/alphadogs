@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Race Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="g-layout">
+        <header class="g-header header-grid">
+            <div class="header-grid-main" style="--height: 96px; background-color: #2e1b5b;">
+                <div class="header-grid-row">
+                    <div class="header-grid-cell-left">
+                        <div class="header-logo" style="--width: 220px; --height: 96px;">
+                            <!-- Placeholder for logo; replace with your image -->
+                            <div class="header-logo-image" style="--width: 180px; --height: 96px;">
+                                <div class="logo-placeholder">Logo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-grid-cell-center">
+                        <div class="banner">
+                            <h1>Tournament Leaderboard</h1>
+                        </div>
+                    </div>
+                    <div class="header-grid-cell-right"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-content">
+            <main>
+                <table class="leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Table body will be populated by JavaScript -->
+                        <tr id="loading-row">
+                            <td colspan="2">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+
+        <footer class="g-footer">
+            <div class="footer-grid">
+                <div class="footer-grid-cell_fill"></div>
+                <div class="footer-grid-cell_25">
+                    <p>© 2025 Dog Race Tournament. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
