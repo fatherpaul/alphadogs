@@ -74,7 +74,7 @@ html {
 .header-logo {
     --width: 220px;
     --height: 96px;
-    background-image: linear-gradient(rgba(46, 27, 91, 0.77), rgba(46, 27, 91, 0.77));
+    background-image: #2e1b5b;
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
