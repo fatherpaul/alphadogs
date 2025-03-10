@@ -8,46 +8,47 @@
 </head>
 <body>
     <div class="g-layout">
-        <header class="g-header header-grid">
-            <div class="header-grid-main" style="--height: 96px; background-color: #2e1b5b;">
-                <div class="header-grid-row">
-                    <div class="header-grid-cell-left">
-                       <div class="header-logo-image" style="--width: 180px; --height: 96px;">
-    <img src="header-logo.png" alt="Dog Race Logo" style="width: 180px; height: 96px; object-fit: contain;">
-</div>
+     <header class="g-header header-grid">
+    <div class="header-grid-main" style="--height: 50px; background-color: #791cc0;">
+        <div class="header-grid-row">
+            <div class="header-grid-cell-left">
+                <div class="header-logo" style="--width: 220px; --height: 50px;">
+                    <div class="header-logo-image" style="--width: 180px; --height: 50px;">
+                        <!-- Replace with new logo URL or file after uploading -->
+                        <img src="new-logo.svg" alt="New Dog Race Logo" style="width: 180px; height: 50px; object-fit: contain;">
                     </div>
-                    <div class="header-grid-cell-center">
-                        <div class="banner">
-                            <h1>Tournament Leaderboard</h1>
-                        </div>
-                    </div>
-                    <div class="header-grid-cell-right"></div>
                 </div>
             </div>
-        </header>
-
-        <div class="g-content">
-            <main>
-                <table class="leaderboard">
-                   <thead>
-    <tr>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Name</th>
-        <th>Points</th>
-    </tr>
-</thead>
-                    <tbody id="leaderboard-body">
-                        <!-- Table body will be populated by JavaScript -->
-                        <tr id="loading-row">
-                            <td colspan="2">Loading...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </main>
+            <div class="header-grid-cell-center"></div>
+            <div class="header-grid-cell-right"></div>
         </div>
+    </div>
+</header>
+<div class="g-content" style="padding-top: 50px;">
+    <main>
+        <div class="banner" style="text-align: center; text-decoration: underline; margin-bottom: 20px;">
+            <h1>Tournament Leaderboard</h1>
+        </div>
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Points</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Table body will be populated by JavaScript -->
+                <tr id="loading-row">
+                    <td colspan="6">Loading...</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</div>
 
         <footer class="g-footer">
             <div class="footer-grid">
